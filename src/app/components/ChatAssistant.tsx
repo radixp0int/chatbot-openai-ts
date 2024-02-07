@@ -17,7 +17,7 @@ const ChatAssistant = (props: Props) => {
             <AccordionContent>
               <div className='flex flex-col h-80'>
                 messages
-                <ChatInput />
+                <ChatInput className='px-4' />
               </div>
             </AccordionContent>
           </div>
