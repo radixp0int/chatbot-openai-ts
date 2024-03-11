@@ -18,12 +18,24 @@ const ChatInput = ({ className, ...props }: ChatInputProps) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ messages: 'hello' })
+        body: JSON.stringify({ messages: [message] })
       })
       return response.body
     },
-    onSuccess: () => {
-      console.log('message successfully sent')
+    onSuccess: async (stream) => {
+      if (!stream) throw new Error('No stream from OpenAI server.')
+
+      const reader = stream.getReader()
+      const decoder = new TextDecoder()
+      let done = false
+
+
+      while (!done) {
+        const { value, done: doneReading } = await reader.read()
+        done = doneReading
+        const chunkValue = decoder.decode(value)
+        console.log('chunkValue', chunkValue)
+      }
     }
   })
   return (

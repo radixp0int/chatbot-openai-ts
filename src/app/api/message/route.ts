@@ -1,5 +1,9 @@
 import { chatbotPrompt } from "@/app/helpers/constants/chatbot-prompt";
-import { ChatGPTMessage } from "@/lib/openai-stream";
+import {
+  ChatGPTMessage,
+  OpenAiStream,
+  OpenAiStreamPayload,
+} from "@/lib/openai-stream";
 import { MessageArraySchema } from "@/lib/validators/message";
 
 export async function POST(req: Request) {
@@ -12,13 +16,14 @@ export async function POST(req: Request) {
     content: message.text,
   }));
 
-  outboundMessages.unshift({// add the user message to the front of the array
+  outboundMessages.unshift({
+    // add the user message to the front of the array
     role: "system",
     content: chatbotPrompt,
   });
 
-  const payload = {
-    model: 'gpt-3.5-turbo',
+  const payload: OpenAiStreamPayload = {
+    model: "gpt-3.5-turbo",
     messages: outboundMessages,
     temperature: 0.4,
     top_p: 1,
@@ -27,9 +32,9 @@ export async function POST(req: Request) {
     max_tokens: 150,
     stream: true,
     n: 1,
-  }
+  };
 
-  const stream = await OpenAiStream(payload)
+  const stream = await OpenAiStream(payload);
 
-  return new Response(stream)
+  return new Response(stream);
 }
