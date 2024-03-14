@@ -12,7 +12,7 @@ const ChatInput = ({ className, ...props }: ChatInputProps) => {
   const [input, setInput] = useState<string>('')
 
   const { mutate: sendMessage } = useMutation({
-    mutationFn: async (message : Message) => {
+    mutationFn: async (message: Message) => {
       const response = await fetch('/api/message', {
         method: 'POST',
         headers: {
