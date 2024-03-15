@@ -24,7 +24,7 @@ const ChatInput: FC<ChatInputProps> = ({ className, ...props }) => {
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const { mutate: sendMessage, isLoading } = useMutation({
+  const { mutate: sendMessage, isPending } = useMutation({
     mutationKey: ["sendMessage"],
     mutationFn: async (message: Message) => {
       const response = await fetch("/api/message", {
@@ -91,7 +91,7 @@ const ChatInput: FC<ChatInputProps> = ({ className, ...props }) => {
             }
           }}
           maxRows={4}
-          disabled={isLoading}
+          disabled={isPending}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           autoFocus
@@ -100,7 +100,7 @@ const ChatInput: FC<ChatInputProps> = ({ className, ...props }) => {
         />
         <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
           <kbd className="inline-flex items-center rounded border bg-white border-gray-200 px-1 font-sans text-xs text-gray-400">
-            {isLoading ? (
+            {isPending ? (
               <Loader2 className="w-3 h-3 animate-spin" />
             ) : (
               <CornerDownLeft className="w-3 h-3" />
