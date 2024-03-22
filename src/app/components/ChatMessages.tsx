@@ -36,8 +36,8 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ className, ...props }) => {
               )}
             >
               <p
-                className={cn("px-4 py-2 rounded-lg", {
-                  "bg-blue-600 text-white": message.isUserMessage,
+                className={cn("px-4 py-2 rounded-lg max-w-xs break-words", {
+                  "bg-blue-600 text-white max-w-[18rem]": message.isUserMessage,
                   "bg-gray-200 text-gray-900": !message.isUserMessage,
                 })}
               >
