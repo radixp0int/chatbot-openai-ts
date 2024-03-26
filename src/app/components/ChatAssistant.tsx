@@ -1,10 +1,15 @@
-import React from 'react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion'
-import ChatHeader from './ChatHeader'
-import ChatInput from './ChatInput'
-import ChatMessage from './ChatMessages'
+import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
+import ChatHeader from "./ChatHeader";
+import ChatInput from "./ChatInput";
+import ChatMessage from "./ChatMessages";
 
-type Props = {}
+type Props = {};
 
 const ChatAssistant = (props: Props) => {
   return (
@@ -30,6 +35,6 @@ const ChatAssistant = (props: Props) => {
       </AccordionItem>
     </Accordion>
   );
-}
+};
 
-export default ChatAssistant
+export default ChatAssistant;
