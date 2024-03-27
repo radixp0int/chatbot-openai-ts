@@ -7,8 +7,9 @@ import Providers from "./components/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chat Buddy",
-  description: "Your chatbot for asking questions and getting answers.",
+  title: "Chat Virtual Assistant",
+  description:
+    "Your virtual assistant for asking questions and getting answers.",
 };
 
 export default function RootLayout({
