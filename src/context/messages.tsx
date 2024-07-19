@@ -12,10 +12,10 @@ export const MessagesContext = createContext<{
 }>({
   messages: [],
   isMessageUpdating: false,
-  addMessage: () => { },
-  removeMessage: () => { },
-  updateMessage: () => { },
-  setIsMessageUpdating: () => { },
+  addMessage: () => {},
+  removeMessage: () => {},
+  updateMessage: () => {},
+  setIsMessageUpdating: () => {},
 });
 
 export function MessagesProvider({ children }: { children: React.ReactNode }) {
