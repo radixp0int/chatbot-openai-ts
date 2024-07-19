@@ -7,7 +7,7 @@ import Providers from "./components/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chat Virtual Assistant",
+  title: "Resume Virtual Assistant",
   description:
     "Your virtual assistant for asking questions and getting answers.",
 };
