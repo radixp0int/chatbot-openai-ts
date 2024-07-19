@@ -24,7 +24,7 @@ export function MessagesProvider({ children }: { children: React.ReactNode }) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: nanoid(),
-      text: "Hello, this is your Virtual Assistant. How can I help you?",
+      text: "Hello, I am here to answer any questions about Christian's experience and skills. Please ask a question to start.",
       isUserMessage: false,
     },
   ]);
