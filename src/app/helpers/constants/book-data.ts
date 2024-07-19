@@ -8,17 +8,17 @@ PERSISTENT · TEAM-FOCUSED · MOTIVATOR · ALWAYS LEARNING
 
  
 
-Skills 	 
+Skills: 	 
 
-Languages	Javascript · Java · Typescript · Oracle SQL 
+Languages:	Javascript · Java · Typescript · Oracle SQL 
 
-CI/CD Tools	Jenkins · Docker · OpenShift · BitBucket · Artifactory 
+CI/CD Tools:	Jenkins · Docker · OpenShift · BitBucket · Artifactory 
 
-Software	VS Code · IntelliJ IDEA · Postman · Dynatrace · SwaggerUI · Jira 
+Software:	VS Code · IntelliJ IDEA · Postman · Dynatrace · SwaggerUI · Jira 
 
-Technologies  ReactJS · Angular · Spring Boot · DJango 
+Frameworks:  ReactJS · Angular · Spring Boot · DJango 
 
-Testing	Jest · Gradle-Selenium w/ Cucumber · Karate · RestAssured 
+Testing:	Vitest · Jest · Gradle-Selenium w/ Cucumber · Karate · RestAssured 
 
  
 
